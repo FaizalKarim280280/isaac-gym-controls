@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="table">
+    <link name="base_link"></link>
+
+    <link name="table_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="./table.obj" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="./table.obj" scale="1 1 1" />
+            </geometry>
+            <!-- <sdf resolution="1024"/> -->
+        </collision>
+        <inertial>
+            <mass value="1.0" />
+            <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.4" />
+        </inertial>
+    </link>
+
+    <joint name="table_base" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="table_link"/>
+    </joint>
+    
+</robot>

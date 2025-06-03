@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="cube">
+    <link name="base_link"></link>
+
+    <link name="cube_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="0.05 0.1 0.3" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="0.05 0.1 0.3" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1" />
+        </inertial>
+    </link>
+
+    <joint name="cube_base" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="cube_link"/>
+    </joint>
+</robot>

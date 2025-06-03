@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="monitor">
+    <link name="base_link"></link>
+
+    <link name="monitor_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="./monitor.obj" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="./monitor.obj" scale="1 1 1" />
+            </geometry>
+            <!-- <sdf resolution="1024"/> -->
+        </collision>
+        <inertial>
+            <mass value="1.0" />
+            <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.4" />
+        </inertial>
+    </link>
+
+    <joint name="monitor_base" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="monitor_link"/>
+    </joint>
+    
+</robot>

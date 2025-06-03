@@ -1,0 +1,48 @@
+<mujoco model="RobotIQ">
+  <compiler angle="radian" coordinate="local" meshdir="./" texturedir="./"></compiler>
+  <asset>
+    <mesh name="RIQ_palm" file="RIQ_palm.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="RIQ_link_1" file="RIQ_link_1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="RIQ_link_2" file="RIQ_link_2.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="RIQ_link_3" file="RIQ_link_3.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+  <worldbody>
+    <geom pos="0.00148646 0.00036187 -2.7e-07" type="mesh" mesh="RIQ_palm"/>
+    <body name="RIQ_link_1_joint_a" pos="0.044475 0.041358 0" quat="0.707107 0 0 0.707107">
+      <joint name="RIQ_palm_RIQ_link_1_joint_a" pos="0 0 0" axis="0 0 1" range="-0.0940732 1.12766"/>
+      <geom pos="0.0496867 -0.0282374 0" quat="0.966801 0 0 -0.25553" type="mesh" mesh="RIQ_link_1"/>
+      <body name="RIQ_link_2_joint_a" pos="0.0496867 -0.0282374 0" quat="0.966801 0 0 -0.25553">
+        <joint name="RIQ_link_1_RIQ_link_2_joint_a" pos="0 0 0" axis="0 0 1" range="0 1.5708"/>
+        <geom pos="0.03894 0 0" type="mesh" mesh="RIQ_link_2"/>
+        <body name="RIQ_link_3_joint_a" pos="0.03894 0 0">
+          <joint name="RIQ_link_2_RIQ_link_3_joint_a" pos="0 0 0" axis="0 0 1" range="-0.953124 0.757298"/>
+          <geom quat="0.966801 0 0 0.25553" type="mesh" mesh="RIQ_link_3"/>
+        </body>
+      </body>
+    </body>
+    <body name="RIQ_link_0_joint_b" pos="-0.040507 0.019844 0.036513" quat="0.707107 0 0.707107 0">
+      <joint name="RIQ_palm_RIQ_link_0_joint_b" pos="0 0 0" axis="0 0 1" range="-0.296706 0.296706"/>
+      <body name="RIQ_link_1_joint_b" pos="-7.0118e-11 0.021877 -0.00397" quat="0.5 0.5 0.5 0.5">
+        <joint name="RIQ_link_0_RIQ_link_1_joint_b" pos="0 0 0" axis="0 0 1" range="-0.0940732 1.12766"/>
+        <body name="RIQ_link_2_joint_b" pos="0.0496867 -0.0282374 0" quat="0.966801 0 0 -0.25553">
+          <joint name="RIQ_link_1_RIQ_link_2_joint_b" pos="0 0 0" axis="0 0 1" range="0 1.5708"/>
+          <body name="RIQ_link_3_joint_b" pos="0.03894 0 0">
+            <joint name="RIQ_link_2_RIQ_link_3_joint_b" pos="0 0 0" axis="0 0 1" range="-0.953124 0.757298"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="RIQ_link_0_joint_c" pos="-0.040507 0.019844 -0.036513" quat="0.707107 0 0.707107 0">
+      <joint name="RIQ_palm_RIQ_link_0_joint" pos="0 0 0" axis="0 0 1" range="-0.296706 0.296706"/>
+      <body name="RIQ_link_1_joint_c" pos="-7.0118e-11 0.021877 -0.00397" quat="0.5 0.5 0.5 0.5">
+        <joint name="RIQ_link_0_RIQ_link_1_joint_c" pos="0 0 0" axis="0 0 1" range="-0.0940732 1.12766"/>
+        <body name="RIQ_link_2_joint_c" pos="0.0496867 -0.0282374 0" quat="0.966801 0 0 -0.25553">
+          <joint name="RIQ_link_1_RIQ_link_2_joint_c" pos="0 0 0" axis="0 0 1" range="0 1.5708"/>
+          <body name="RIQ_link_3_joint_c" pos="0.03894 0 0">
+            <joint name="RIQ_link_2_RIQ_link_3_joint_c" pos="0 0 0" axis="0 0 1" range="-0.953124 0.757298"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="guitar">
+    <link name="base_link"></link>
+
+    <link name="guitar_link">
+        <visual>
+            <origin rpy="0 0.2617 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="./guitar.obj" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0.2617 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="./guitar.obj" scale="0.5 0.5 0.5" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="guitar_base" type="fixed">
+        <origin rpy="0 0 1.57" xyz="0 0 0" />
+        <parent link="base_link" />
+        <child link="guitar_link" />
+    </joint>
+
+</robot>

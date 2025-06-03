@@ -4,6 +4,8 @@
 
 ### 1. IsaacGym
 
+Refer to <a href="https://medium.com/@piliwilliam0306/install-isaac-gym-on-ubuntu-22-04-8ebf4b86e6f7">Install Isaac Gym on Ubuntu 22.04</a>
+
 ```
 cd IsaacGym_Preview_4_Package/isaacgym
 conda env create -f rlgpu_conda_env.yml
@@ -14,6 +16,8 @@ pip install -e .
 ```
 
 ### 2. CGN_pytorch
+
+Refer to <a href="https://github.com/sebbyjp/cgn_pytorch">Contact-GraspNet Pytorch</a>
 
 ```
 conda create --name cgn python=3.9
@@ -26,6 +30,8 @@ pip install torch-geometric
 ```
 
 ### 3. IsaacGymEnvs
+
+Refer to <a href="https://github.com/isaac-sim/IsaacGymEnvs/tree/main?tab=readme-ov-file#installation">IsaacGymEnvs Installation</a>
 
 ```
 conda activate rlgpu_conda_env

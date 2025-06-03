@@ -1,4 +1,5 @@
 # isaac-gym-controls
+PPT used in the session: <a href="https://github.com/FaizalKarim280280/isaac-gym-controls/blob/main/Introduction%20to%20Isaac%20Gym%20and%20Controls.pdf">View</a>
 
 ## Installation
 

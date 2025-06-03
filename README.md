@@ -1,6 +1,6 @@
 # isaac-gym-controls
 
-# Installation
+## Installation
 
 ### 1. IsaacGym
 
@@ -33,7 +33,7 @@ cd IsaacGymEnvs
 pip install -e .
 ```
 
-# Instructions to run IsaacGym
+## Instructions to run IsaacGym
 
 ```
 python3 single_arm.py
@@ -44,7 +44,7 @@ python3 single_arm.py
 [3] Grasp Object \
 [4] Exit
 
-# Instructions to run IsaacGymEnvs
+## Instructions to run IsaacGymEnvs
 
 ```
 python3 train.py task=Cartpole
@@ -52,7 +52,7 @@ python3 train.py task=Cartpole
 
 The task can be changed to othe tasks such as ```Ant, Humanoid, FrankaCubeStack``` etc. Refer to <a href="https://github.com/isaac-sim/IsaacGymEnvs/blob/main/docs/rl_examples.md">IsaacGymEnvs Tasks</a>. 
 
-# For Practice
+## For Practice
 
 1. Try changing the goal poses of IK and note if the arm is able to reach there or not. Note: In some cases the arm will struggle to reach certain goal poses because of joint limits. 
 

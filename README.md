@@ -64,3 +64,7 @@ The task can be changed to othe tasks such as ```Ant, Humanoid, FrankaCubeStack`
 
 2. Currently, the grasp object only grasps and lifts the object to the lift pose. Try extending the current code to also place the object to a final goal pose after the object has been lifted up. 
 
+## Migration from Isaac Gym to Isaac Lab
+
+Refer to this artcle <a href="https://isaac-sim.github.io/IsaacLab/main/source/migration/migrating_from_isaacgymenvs.html">Isaac Lab Documentation</a>
+
